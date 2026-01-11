@@ -1,1 +1,5 @@
 .history
+test/
+AGENTS.md
+yarn.lock
+.gitignore
