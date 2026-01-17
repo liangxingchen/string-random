@@ -112,11 +112,7 @@ declare namespace stringRandom {
  * @description
  * 生成指定长度的随机字符串，支持自定义字符集和字符类型控制。
  *
- * **重要提示：** 本函数使用 `Math.random()` 生成随机数，不具备加密安全性，
- * **不适合**用于生成密码、令牌、会话 ID 等安全敏感场景。
- * 如需加密安全的随机数，请使用 Node.js 的 `crypto` 模块。
- *
- * @param {number} [length=8] - 随机字符串的长度，默认为 8
+ * @param {number} [length=8] - 随机字符串的长度，默认为 8，最大支持4096
  * @param {stringRandom.Options | string | true} [options={}] - 配置选项
  *
  * @returns {string} 生成的随机字符串
@@ -158,6 +154,9 @@ declare namespace stringRandom {
  * stringRandom(10, { specials: ":;,", numbers: false, letters: false }); // ":;:;:;:;:;"
  * ```
  */
-declare function stringRandom(length?: number, options?: stringRandom.Options | string | true): string;
+declare function stringRandom(
+  length?: number,
+  options?: stringRandom.Options | string | true,
+): string;
 
 export = stringRandom;

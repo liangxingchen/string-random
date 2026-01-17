@@ -88,12 +88,12 @@ describe("specials", function () {
         var str = random(32, { specials: true });
         assert(
           /^[\~\!\@\#\$\%\^\*\(\)\_\+\-\=\[\]\{\}\|\;\:\,\.\/\<\>\?a-z0-9]{32}$/i.test(
-            str
-          )
+            str,
+          ),
         );
         var reg = /[\~\!\@\#\$\%\^\*\(\)\_\+\-\=\[\]\{\}\|\;\:\,\.\/\<\>\?]/;
         assert(reg.test(str));
-      }, 10000);
+      }, 1000);
     });
   });
 
@@ -112,8 +112,8 @@ describe("specials", function () {
         var str = random(32, true);
         assert(
           /^[\~\!\@\#\$\%\^\*\(\)\_\+\-\=\[\]\{\}\|\;\:\,\.\/\<\>\?a-z0-9]{32}$/i.test(
-            str
-          )
+            str,
+          ),
         );
       }, 10000);
     });
